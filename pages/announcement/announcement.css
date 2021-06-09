@@ -1,0 +1,154 @@
+html{
+    height:100%;
+}
+
+body{
+    min-height:100%;
+    position:relative;
+}
+
+.site-tree{
+    width:20%;
+    display:inline-block;
+    vertical-align:top;
+    margin-top:30px;
+}
+
+.site-tree .site-tree-noicon{
+    line-height:40px;
+    padding-left:20px;
+}
+
+.site-tree .site-tree-noicon a{
+    color:#009688;
+}
+
+.site-tree .site-tree-noicon a:hover{
+    color:#03b8a6;
+}
+
+.site-tree blockquote{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.site-content{
+    width:80%;
+    border-left:1px solid #eee;
+    display:inline-block;
+    vertical-align:top;
+    box-sizing:border-box;
+    padding:0 30px 30px 30px;
+    margin-top:30px;
+}
+
+.site-content .title{
+    padding-bottom:20px;
+    border-bottom:1px solid #eee;
+    margin-bottom:20px;
+}
+
+.site-content .site-h1{
+    text-align:center;
+}
+
+.site-content .site-h3{
+    text-align:center;
+    margin-top:18px;
+    color:#444;
+}
+
+.site-text{
+    text-indent:2em;
+    line-height:200%;
+    font-size:16px;
+}
+
+.layui-main{
+    padding-bottom:80px;
+}
+
+/* 公告目录区样式 */
+.ann-catalog{
+    margin-top:40px;
+}
+
+.header{
+    padding-bottom:20px;
+    border-bottom:1px solid #eee;
+    margin-bottom:30px;
+    font-weight:lighter;
+}
+
+.footer{
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    padding:14px 0;
+    background:#eee;
+    width:100%;
+}
+
+.area{
+    margin-top:40px;
+}
+
+.ann-list{
+    border:1px solid rgb(230, 230, 230);;
+    border-bottom:0;
+}
+
+.ann-list li{
+    width:100%;
+    height:46px;
+    line-height:46px;
+    border-bottom:1px solid rgb(230, 230, 230);;
+}
+
+.ann-list li:after{
+    display:block;
+    content:'';
+    clear:both;
+}
+
+.ann-list li:hover{
+    background:#eee;
+}
+
+.ann-list a{
+    float:left;
+    margin-left:20px;
+    font-size:16px;
+    color:rgb(102, 102, 102);
+}
+
+.ann-list a:hover{
+    color:#009688;
+}
+
+.ann-list span{
+    float:right;
+    margin-right:20px;
+    font-size:16px;
+    color:rgb(102, 102, 102);
+}
+
+#ann-divPage{
+    text-align:center;
+}
+
+#help-divPage{
+    text-align:center;
+}
+
+.select-this{
+    color:#00b4a2;
+}
+
+.empty-tip{
+    width:100%;
+    padding:40px 0;
+    text-align:center;
+    font-size:30px;
+    color:#bbb;
+}

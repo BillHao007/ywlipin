@@ -1,0 +1,255 @@
+html{
+    height:100%;
+}
+
+body{
+    min-height:100%;
+    position:relative;
+}
+
+.layui-container{
+    padding-bottom:80px;
+}
+
+.goods{
+    margin-top:40px;
+}
+
+.goods h1{
+    margin-bottom:30px;
+}
+
+.goods .row{
+    margin-top:20px;
+}
+
+.goods .card{
+    float:left;
+    border:1px solid rgb(230,230,230);
+    width:23.5%;
+    margin-left:2%;
+    box-sizing:border-box;
+    border-radius:4px;
+}
+
+.goods .card:first-child{
+    margin-left:0;
+}
+
+.goods .card .good-img{
+    width:100%;
+    height:260px;
+    background-position:center !important;
+    background-size:contain !important;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+}
+
+.goods .card .good-info{
+    padding:16px 14px 20px 14px;
+}
+
+.good-info .good-data .weight{
+    float:right;
+    line-height:30px;
+    color:#aaa;
+}
+
+.good-info .good-data:after{
+    display:block;
+    content:"";
+    clear:both;
+}
+
+.good-info .good-title{
+    font-size:14px;
+    margin:16px 0px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.good-info .good-rest{
+    line-height:35.2px;
+    color:#009688;
+}
+
+.good-info .button{
+    float:right;
+    background-color:#009688;
+    border-radius:4px;
+    padding:8px 14px;
+    color:#fff;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.good-info .button:active{
+    background-color:#00796d;
+}
+
+.good-info .price{
+    display:inline-block;
+    line-height:30px;
+    font-size:20px;
+    color:#f40;
+    font-weight:bold;
+}
+
+.good-info:after{
+    display:block;
+    content:'';
+    clear:both;
+}
+
+.goods .row:after{
+    display:block;
+    content:'';
+    clear:both;
+}
+
+.notice-area .layui-row .layui-col-md6{
+    padding:0 10px;
+    
+}
+
+.notice-area .layui-row .layui-col-md6 > div{
+    width:100%;
+    border:1px solid rgb(230, 230, 230);
+    border-radius:4px;
+    box-sizing:border-box;
+}
+
+.notice-area .board-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    width:100%;
+    padding:14px 20px;
+    border-bottom:1px solid #ddd;
+    box-sizing:border-box;
+    margin-bottom:18px;
+    
+}
+
+.notice-area .see-more{
+    color:#666;
+    font-size:12px;
+}
+
+.notice-area .see-more:hover{
+    color:#009688;
+}
+
+.notice-area .board-content .item{
+    margin-bottom:14px;
+    padding:0 20px;
+}
+
+.notice-area .board-content .title{
+    color:#009688;
+    font-size:16px;
+    float:left;
+}
+
+.notice-area .board-content .title:hover{
+    color:#00af9e;
+}
+
+.notice-area .board-content .time{
+    float:right;
+    font-size:16px;
+}
+
+.notice-area .item:after{
+    display:block;
+    content:'';
+    clear:both;
+}
+
+.footer{
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    padding:14px 0;
+    background:#eee;
+    width:100%;
+}
+
+.empty-tip{
+    width:100%;
+    padding:40px 0;
+    text-align:center;
+    font-size:30px;
+    color:#bbb;
+}
+
+/* 侧栏咨询广告 */
+
+.side-tip{
+    position:fixed;
+    z-index:10;
+    top:50%;
+    margin-top:-103px;
+    left:-60px;
+}
+
+.side-tip .tip-show{
+    display:inline-block;
+    position:absolute;
+    top:50%;
+    margin-top:-38.4px;
+    width:16px;
+    padding:10px 8px;
+    background: #009688;
+    font-size:14px;
+    border-radius:0 4px 4px 0;
+    color:#fff;
+}
+
+.side-tip .tip-hide{
+    display:inline-block;
+}
+
+.side-tip .wechat{
+    width:60px;
+    padding:10px 0;
+    background:#009688;
+    border-bottom:1px solid #fff;
+    border-top-right-radius:4px;
+    text-align:center;
+    color:#fff;
+    font-size:12px;
+}
+
+.side-tip .wechat:hover{
+    background:#00776b;
+}
+
+.side-tip .QQ{
+    width:60px;
+    padding:10px 0;
+    background:#009688;
+    border-bottom-right-radius:4px;
+    text-align:center;
+    color:#fff;
+    font-size:12px;
+}
+
+.side-tip p{
+    margin-top:10px;
+}
+
+.side-tip .QQ:hover{
+    background:#00776b;
+}
+
+.side-tip:hover{
+    left:0;
+    cursor:pointer;
+}
+
+.side-tip:hover .tip-show{
+    display:none;
+}

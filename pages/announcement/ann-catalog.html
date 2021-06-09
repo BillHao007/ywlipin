@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【礼品网】公告</title>
+    <link rel="stylesheet" href="../../frame/layui/css/layui.css">
+    <link rel="stylesheet" href="announcement.css">
+</head>
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">礼品网</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item"><a href="../homepage/homepage.html">首页</a></li>
+                <li class="layui-nav-item"><a href="../store/store.html">礼品商城</a></li>
+                <li class="layui-nav-item layui-this"><a href="">公告</a></li>
+                <li class="layui-nav-item"><a href="">代理加盟</a></li>
+                <li class="layui-nav-item"><a href="../user/user.html?data-no=4">充值</a></li>
+                <li class="layui-nav-item"><a href="">关于我们</a></li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item unlogin-status">
+                    <a href="../login/login.html">登录&nbsp;/&nbsp;注册</a>
+                </li>
+                <li class="layui-nav-item login-status">
+                    <a href="../user/user.html?data-no=0" id="username"></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="../user/user.html?data-no=0">个人中心</a></dd>
+                        <dd><a href="../manager/manager.html?data-no=0">控制台</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item login-status"><a href="javascript:;" id="logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-main ann-catalog">
+        <h1 class="header">网站公告</h1>
+        <div class="area">
+            <ul id="annList" class="ann-list">
+                <!-- <li class="ann-item">
+                    <a href="" class="ann-title">礼品网正式上线了</a>
+                    <span class="ann-time">2020-05-26</span>
+                </li>
+                <li class="help-item odd">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item odd">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item odd">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li> -->
+            </ul>
+            <div id="ann-divPage"></div>
+        </div>
+        <h1 class="header">常见问题</h1>
+        <div class="area">
+            <ul id="helpList" class="ann-list">
+                <!-- <li class="help-item">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li>
+                <li class="help-item">
+                    <a href="" class="help-title">礼品网正式上线了</a>
+                    <span class="help-time">2020-05-26</span>
+                </li> -->
+            </ul>
+            <div id="help-divPage"></div>
+        </div>
+    </div>
+    <div class="footer">©&nbsp;<span id="footer-year"></span>&nbsp;礼品网&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;浙ICP备20014558号-2</div>
+    <script type="text/javascript" src="../../frame/jquery.js"></script>
+    <script type="text/javascript" src="../../plugins/jq_cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../plugins/common.js"></script>
+    <script type="text/javascript" src="../../frame/layui/layui.js"></script>
+    <script type="text/javascript" src="js/global_var.js"></script>
+    <script type="text/javascript" src="js/ann-catalog.js"></script>
+</body>
+</html>

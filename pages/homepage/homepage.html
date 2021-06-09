@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>礼品网</title>
+    <link rel="stylesheet" href="../../frame/layui/css/layui.css">
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">礼品网</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item layui-this"><a href="">首页</a></li>
+                <li class="layui-nav-item"><a href="../store/store.html">礼品商城</a></li>
+                <li class="layui-nav-item"><a href="../announcement/ann-catalog.html">公告</a></li>
+                <li class="layui-nav-item"><a href="">代理加盟</a></li>
+                <li class="layui-nav-item"><a href="../user/user.html?data-no=4">充值</a></li>
+                <li class="layui-nav-item"><a href="">关于我们</a></li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item unlogin-status">
+                    <a href="../login/login.html">登录&nbsp;/&nbsp;注册</a>
+                </li>
+                <li class="layui-nav-item login-status">
+                    <a href="../user/user.html?data-no=0" id="username"></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="../user/user.html?data-no=0">个人中心</a></dd>
+                        <dd><a href="../manager/manager.html?data-no=0">控制台</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item login-status"><a href="javascript:;" id="logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-main site-inline goods">
+        <div class="site-content">
+            <h1 class="site-h1">精选礼品</h1>
+            <div class="layui-tab" lay-filter="warehouseTab">
+                <ul class="layui-tab-title">
+                  <li class="layui-this">全部仓储</li>
+                  <li>义乌仓储</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-tab-item1 layui-show"></div>
+                    <div class="layui-tab-item layui-tab-item2"></div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="layui-container notice-area">
+        <div class="layui-row">
+            <div class="layui-col-md6">
+                <div class="announcement">
+                    <div class="board-title">
+                        <h3>网站公告</h3>
+                        <div class="wrapper-a"><a href="../announcement/ann-catalog.html" class="see-more">更多 ></a></div>
+                    </div>
+                    <ul class="board-content">
+                        <!-- <li class="item item1">
+                            <a href="#" class="title">礼品网Beta版正式上线了</a>
+                            <span class="time">2020-05-07</span>
+                        </li> 
+                        <li class="item item2">
+                            <a href="#" class="title">仓库发货通知</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item3">
+                            <a href="#" class="title">仓库发货通知</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item4">
+                            <a href="#" class="title">仓库发货通知</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item5">
+                            <a href="#" class="title">仓库发货通知</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item6">
+                            <a href="#" class="title">仓库发货通知</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item7">
+                            <a href="#" class="title">仓库发货通知</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item8">
+                            <a href="#" class="title">仓库发货通知</a>
+                            <span class="time">2020-05-07</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-col-md6">
+                <div class="help">
+                    <div class="board-title">
+                        <h3>常见问题</h3>
+                        <a href="../announcement/ann-catalog.html" class="see-more">更多 ></a>
+                    </div>
+                    <ul class="board-content">
+                        <!-- <li class="item item1">
+                            <a href="#" class="title">下单失败怎么办</a>
+                            <span class="time">2020-05-07</span>
+                        </li> 
+                        <li class="item item2">
+                            <a href="#" class="title">礼品网操作流程</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item3">
+                            <a href="#" class="title">常见问题汇总</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item4">
+                            <a href="#" class="title">网站怎么用</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item5">
+                            <a href="#" class="title">网站怎么用</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item6">
+                            <a href="#" class="title">网站怎么用</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item7">
+                            <a href="#" class="title">网站怎么用</a>
+                            <span class="time">2020-05-07</span>
+                        </li>
+                        <li class="item item8">
+                            <a href="#" class="title">网站怎么用</a>
+                            <span class="time">2020-05-07</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="side-tip">
+        <div class="tip-hide">
+            <div class="wechat"><img src="../../images/wechat.png" width="40px"><p>微信咨询</p></div>
+            <div class="QQ"><img src="../../images/qq.png" width="40px"><p>QQ咨询</p></div>
+        </div><div class="tip-show">业务咨询</div>
+    </div>
+    <div class="footer">©&nbsp;<span id="footer-year"></span>&nbsp;礼品网&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;浙ICP备20014558号-2</div>
+    <script src="../../frame/jquery.js"></script>
+    <script src="../../plugins/jq_cookie/jquery.cookie.js"></script>
+    <script src="../../frame/layui/layui.js"></script>
+    <script src="js/global_var.js"></script>
+    <script src="../../plugins/common.js"></script>
+    <script src="js/layui-modules.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/homepage.js"></script>
+</body>
+</html>

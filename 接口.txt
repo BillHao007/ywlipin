@@ -1,0 +1,124 @@
+通用输入参数 token
+
+通用返回参数 success:Number
+            info:String
+
+获得订单趋势图
+personPage/getOrderTrend
+input get
+    null
+output 
+trendList:[
+    {
+        orderTime:yy-mm-dd
+        orderNum:Number
+        orderId:Number
+    }
+]
+
+获得订单
+personPage/searchOrderByCondition
+input get
+    orderId:Number(可选)
+    beginTime:yy-MM-dd(可选)
+    endTime:yy-MM-dd(可选)
+    pageNum:Number(可选)
+output
+    expressOrderList:[
+        {
+            orderId:Number
+            company:String
+            expressNum:Number
+            finishTime:Number
+            money:Number
+            goodsName:String
+        }
+    ]   
+    pageNum:Number
+    total:Number
+    totalPage:Number
+
+获得订单详情
+personPage/searchExpressByCondition
+imput get
+    orderId:Number(可选)
+    thirPartId:String(可选)
+    expressId:String(可选)
+    beginTime:yy-MM-dd(可选)
+    endTime:yy-MM-dd(可选)
+    deliver:boolean(可选)
+    pageNum:Number(可选)
+output
+    exprssList:[
+        {
+            thirPartId:String
+            expressId:String
+            name:String
+            phone:String
+            province:String
+            city:String
+            expArea:String
+            address:String
+            mark:boolean
+            markDestination:String
+            deliver:boolean
+        }
+    ]
+    pageNum:Number
+    total:Number
+    totalPage:Number
+
+获得打印单
+print/getPrint
+input get
+    goodsName:String(可选)
+    userName:String(可选)
+    beginTime:yy-MM-dd(可选)
+    endTime:yy-MM-dd(可选)
+    deliver:boolean(可选)
+output
+    printList:[
+        {
+            thirPartId:String
+            expressId:String
+            name:String
+            phone:String
+            province:String
+            city:String
+            expArea:String
+            address:String
+            markDestination:String
+            deliver:boolean
+        }
+    ]
+
+打单
+print/print
+input post
+thirPartIdArray:[
+    String
+]
+output
+RequestData:String
+DataSign:String
+EBusinessID:String
+IsPreview:Number
+
+取消订单
+print/cancel
+input post
+thirPartIdArray:[
+    String
+]
+output
+default
+
+354985472086833075 朱培涛 15864765597 山东省 泰安市 新泰市 羊流镇山东省新泰市羊流镇旧关村(271200)
+安徽省 宿州市 埇桥区 杨庄乡苏湖村(000000)
+
+
+200611-167266223101243  段丽秀 15887529992
+河南省 郑州市 高新技术开发区 高新区雪松路福建二建秦桩棚改安置区B区门
+
+200611-205959988421173  赵小芳  13540221947
+四川省成都市青白江区怡城北居  逸家超市

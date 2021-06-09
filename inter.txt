@@ -1,0 +1,112 @@
+每个接口都要传token，除了我特别标注需要stringfy的接口（一般是复杂对象）其他都是键值对
+
+1.算总价接口
+input post 需要stringfy
+{
+    company:String
+    cityArray:[
+        {
+            province:String
+            city:String
+        }
+    ]  
+}
+output
+{
+    success:Number
+    info:String
+    money:Number
+}
+
+2.支付密码修改
+input post
+{
+    oldPayPassword:String
+    newPayPassword:String
+}
+output
+{
+    success:Numer
+    info:String
+}
+3.userInfo获取接口新增了balance属性
+input get
+无
+output
+{
+    user:{
+        xxxx
+        xxxx
+    }
+    balance:Number
+}
+4.获取快递订单
+input get
+无
+output
+{
+    expressOrderList:[
+        {
+            orderId:Number
+            company:Stirng //快递公司
+            expressNum:Number
+            finishTime:date
+            money:Number
+            goodsName:String
+        }
+    ]
+    success:Number
+    info:String
+}
+5.获取订单详情（每个订单内的快递单）
+input get
+{
+    orderId:Number
+}
+output:
+{
+    expressList:[
+        {
+            thirPartId:String //淘宝订单号
+            expressId:String //快递单号
+            name:String //收件人姓名
+            phone:String //电话号码
+            province:String
+            city:String
+            expArea:String
+            address:String
+            mark:Number //0标识该快递创建失败 1标识创建成功
+            markDestination:String //大头笔
+        }
+    ]
+    success:Number
+    info:String
+6.下单接口
+input post 需要Stringfy
+{
+    payPassword:String
+    company:String
+    goodsName:String
+    cityArray:[
+        {
+            province:String
+            city:String
+        }
+    ]
+    expressArray:[
+        {
+            thirPartId:String //淘宝订单号
+            name:String //收件人姓名
+            phone:String //电话号码
+            province:String
+            city:String
+            expArea:String
+            address:String
+        }
+    ]  
+}
+output
+{
+    success:Number
+    info:String
+}

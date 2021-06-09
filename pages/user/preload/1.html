@@ -1,0 +1,118 @@
+<h1 class="header">订单管理</h1>
+<div class="area">
+  <fieldset>
+      <legend>礼品购买</legend>
+  </fieldset>
+  <form action="" class="layui-form">
+      <div class="layui-form-item gift-detail">
+          <label for="" class="layui-form-label">结算</label>
+          <div class="layui-inline">
+              <table class="layui-table gift-table">
+                  <thead>
+                    <tr>
+                      <th>编号</th>
+                      <th>名称</th>
+                      <th>单价</th>
+                      <th>重量</th>
+                      <th>库存</th>
+                      <th>总价</th>
+                    </tr> 
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="gift-id"></td>
+                      <td class="gift-name"></td>
+                      <td class="gift-price"></td>
+                      <td class="gift-weight"></td>
+                      <td class='gift-rest'></td>
+                      <td class="total"></td>
+                    </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">数据来源</label>
+        <div class="layui-input-inline">
+          <select name="cop" lay-verify="required">
+              <option value="">请选择数据来源</option>
+              <option value="0">淘宝/天猫</option>
+              <option value="1">京东</option>
+              <option value="2">拼多多</option>
+              <option value="3">其他</option>
+          </select>
+        </div>
+      </div>
+      <div class="layui-form-item">
+          <label class="layui-form-label">收件人信息</label>
+          <div class="layui-input-block">
+              <textarea name="address" 
+                        placeholder="手动输入或上传表格&#13;&#10;&#13;&#10;手动输入格式：订单编号+收货人姓名+电话号码+省+市+区（县）+详细地址，每项中间有空格，不同信息间回车另起一行&#13;&#10;&#13;&#10;例：123456789 张三 13344213232 ××省 ××市 ××区 ××路××号××××"
+                        class="layui-textarea"></textarea>
+          </div>
+      </div>
+      <div class="layui-form-item">
+          <div class="layui-input-block">
+              <button type="button" class="layui-btn" id="uploadBtn">
+                  <i class="layui-icon">&#xe67c;</i>上传excel表格
+              </button>
+          </div>
+      </div>
+      <div class="layui-form-item" id="area-picker">
+        <label class="layui-form-label">发货仓储</label>
+        <div class="layui-input-inline">
+          <select name="yard" lay-filter="yard" lay-verify="yard">
+            <option value="">请选择发货仓储</option>
+            <option value="1">义务仓储</option>
+          </select>
+        </div>
+        <span class="unit">不同仓储快递价格不同，约为2-3元左右，具体价格以收货地实际价格为准</span>
+      </div>
+      <div class="layui-form-item">
+          <div class="layui-input-block">
+              <button class="layui-btn" lay-submit lay-filter="purchaseBtn">立即下单</button>
+          </div>
+      </div>
+  </form>
+</div>
+<div class="area">
+  <fieldset>
+      <legend>订单列表</legend>
+  </fieldset>
+  <form action="" class="layui-form">
+    <div class="layui-form-item">
+        <div class="layui-input-inline">
+            <input type="text" 
+               name="orderid" 
+               placeholder="请输入订单号" 
+               class="layui-input"
+               lay-verType="tips"/>
+        </div>
+        <div class="layui-input-inline" id="startDate">
+          <input type="text" 
+             name="startDate" 
+             placeholder="开始日期" 
+             class="layui-input"
+             id="layDate1"
+             readOnly
+             lay-verType="tips"/>
+        </div>
+        <div class="layui-input-inline" id="endDate">
+          <input type="text" 
+             name="endDate" 
+             placeholder="结束日期" 
+             class="layui-input"
+             id="layDate2"
+             readOnly
+             lay-verType="tips"/>
+        </div>
+        <div class="layui-inline">
+          <button class="layui-btn" lay-submit lay-filter="searchOrderDetail">查询</button>
+        </div>
+    </div>
+</form>
+  <table id="order-list" lay-filter="orderList"></table>
+</div>
+<script type="text/html" id="tableRowTool">
+    <a class="layui-btn layui-btn-xs" lay-event="seeDetail">查看订单详情</a>
+</script>

@@ -1,0 +1,24 @@
+#wrapper-pay-confirm{
+    margin:20px 30px;
+}
+
+#wrapper-pay-confirm p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+#cost{
+    color:#009688;
+    font-weight:bold;
+    font-size:18px;
+}
+
+#rest{
+    color:#f40;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.pay-btn{
+    margin:0 auto;
+}

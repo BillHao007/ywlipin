@@ -1,0 +1,66 @@
+<h1 class="header">数据统计</h1>
+<div class="area">
+    <fieldset>
+        <legend>近期数据统计</legend>
+    </fieldset>
+    <div id="chart"></div>
+    <div class="static-area">
+        <div class="data-area">
+            <div class="data" id="todayData"></div>
+            <p class="title">今日订单数</p>
+        </div>
+       <div class="data-area">
+           <div class="data" id="yesterdayData"></div>
+           <p class="title">昨日订单数</p>
+       </div>
+       <div class="data-area">
+           <div class="data" id="thisMonthData"></div>
+           <p class="title">本月订单数</p>
+       </div>
+    </div>
+</div>
+<div class="area">
+    <fieldset>
+        <legend>用户下单数据统计</legend>
+    </fieldset>
+    <form action="" class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-input-inline filter-search-item">
+                <input type="text" 
+                    name="filter_username" 
+                    placeholder="输入用户名筛选" 
+                    class="layui-input"
+                    lay-verType="tips"/>
+                <input type="text" 
+                   name="filter_orderid" 
+                   placeholder="输入平台订单号筛选" 
+                   class="layui-input"
+                   lay-verType="tips"/>
+            </div>
+            <div class="layui-input-inline filter-search-item">
+                <input type="text" 
+                    name="filter_startDate" 
+                    placeholder="开始日期" 
+                    class="layui-input"
+                    id="layDate1"
+                    readOnly
+                    lay-verType="tips"/>
+                <input type="text" 
+                    name="filter_endDate" 
+                    placeholder="结束日期" 
+                    id="layDate2"
+                    class="layui-input"
+                    readOnly
+                    lay-verType="tips"/>
+            </div>
+            <div class="layui-input-inline filter-btn">
+                <select name="warehouse" lay-filter="warehouse">
+                    <option value="0">全部仓储</option>
+                    <option value="1">义务仓储</option>
+                </select>
+                <button type="button" class="layui-btn" lay-submit lay-filter="filterUserOrder">订单筛选</button>
+            </div>
+        </div>
+    </form>
+    <table id="userOrderStatic" lay-filter="userOrderStatic"></table>
+</div>

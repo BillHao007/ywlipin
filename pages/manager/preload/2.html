@@ -1,0 +1,65 @@
+<h1 class="header">快递单管理</h1>
+<form action="" class="layui-form">
+    <div class="layui-form-item">
+        <div class="layui-input-inline filter-search-item">
+            <input type="text" 
+                name="filter_username" 
+                placeholder="输入用户名筛选" 
+                class="layui-input"
+                lay-verType="tips"/>
+            <input type="text" 
+               name="filter_orderid" 
+               placeholder="输入平台订单号筛选" 
+               class="layui-input"
+               lay-verType="tips"/>
+        </div>
+        <div class="layui-input-inline filter-search-item">
+            <input type="text" 
+               name="filter_thirPartId" 
+               placeholder="输入第三方订单号筛选" 
+               class="layui-input"
+               lay-verType="tips"/>
+            <input type="text" 
+               name="filter_expressId" 
+               placeholder="输入快递单号筛选" 
+               class="layui-input"
+               lay-verType="tips"/>
+        </div>
+        <div class="layui-input-inline filter-search-item">
+            <input type="text" 
+                name="filter_startDate" 
+                placeholder="开始日期" 
+                class="layui-input"
+                id="layDate1"
+                readOnly
+                lay-verType="tips"/>
+            <input type="text" 
+                name="filter_endDate" 
+                placeholder="结束日期" 
+                id="layDate2"
+                class="layui-input"
+                readOnly
+                lay-verType="tips"/>
+        </div>
+        <div class="layui-input-inline filter-search-item">
+            <input type="text" 
+                name="filter_goodName" 
+                placeholder="输入商品名筛选" 
+                class="layui-input"
+                lay-verType="tips"/>
+            <select name="filter_classify" id="" lay-filter="filterClassify">
+                <option value="0">状态：全部</option>
+                <option value="1">待发货</option>
+                <option value="2">已发货</option>
+            </select>
+        </div>
+        <div class="layui-input-inline filter-btn">
+            <select name="warehouse" lay-filter="warehouse">
+                <option value="0">全部仓储</option>
+                <option value="1">义务仓储</option>
+            </select>
+            <button type="button" class="layui-btn" lay-submit lay-filter="filterExpressBtn">订单筛选</button>
+        </div>
+    </div>
+    <table class="layui-hide" id="express-order-detail" lay-filter="expressOrderDetail"></table>
+</form>

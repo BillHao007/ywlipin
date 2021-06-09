@@ -1,0 +1,47 @@
+<h1 class="header">订单详情</h1>
+<form action="" class="layui-form">
+    <div class="layui-form-item">
+        <div class="layui-input-inline order-detail-search">
+            <input type="text" 
+               name="filter_orderid" 
+               placeholder="请输入平台订单号" 
+               class="layui-input"
+               lay-verType="tips"/>
+            <input type="text" 
+               name="filter_thirPartId" 
+               placeholder="请输入第三方订单号" 
+               class="layui-input"
+               lay-verType="tips"/>
+            <input type="text" 
+               name="filter_expressId"  
+               placeholder="请输入快递单号" 
+               class="layui-input"
+               lay-verType="tips"/>
+        </div>
+        <div class="layui-input-inline order-detail-search">
+            <input type="text" 
+                name="filter_startDate" 
+                placeholder="开始日期" 
+                readOnly
+                id="expLayDate1"
+                class="layui-input"
+                lay-verType="tips"/>
+            <input type="text" 
+                name="filter_endDate"  
+                placeholder="结束日期" 
+                readOnly
+                id="expLayDate2"
+                class="layui-input"
+                lay-verType="tips"/>
+            <select name="filter_classify" id="">
+                <option value="0">全部</option>
+                <option value="1">待发货</option>
+                <option value="2">已发货</option>
+            </select>
+        </div>
+        <div class="layui-inline search-order-detail-btn">
+            <button class="layui-btn" lay-submit lay-filter="searchExpressDetail">查询</button>
+        </div>
+    </div>
+</form>
+<table id="express-order-detail" lay-filter="expressOrderDetail"></table>

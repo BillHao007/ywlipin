@@ -1,0 +1,151 @@
+<h1 class="header">修改信息</h1>
+<div class="area">
+    <fieldset>
+        <legend>修改登录密码</legend>
+    </fieldset>
+    <form action="" class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">旧密码</label>
+            <div class="layui-input-inline">
+                <input type="password"
+                   name="oldPass" 
+                   required  
+                   lay-verify="required" 
+                   placeholder="请输入旧密码" 
+                   autocomplete="off" 
+                   class="layui-input"
+                   lay-verType="tips"/>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">新密码</label>
+            <div class="layui-input-inline">
+                <input type="password"
+                   name="newPass"
+                   required  
+                   lay-verify="required|newpassword" 
+                   placeholder="请输入新密码" 
+                   autocomplete="off" 
+                   class="layui-input"
+                   lay-verType="tips"/>
+            </div>
+            
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">再次确认</label>
+            <div class="layui-input-inline">
+                <input type="password" name="newpassagain" 
+                       required  
+                       lay-verify="passagain" 
+                       placeholder="再次输入新密码" 
+                       autocomplete="off" 
+                       class="layui-input"
+                       lay-verType="tips"/>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block" class="wrapper-button">
+              <button class="layui-btn" lay-submit lay-filter="updateLoginPass">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="area">
+    <fieldset>
+        <legend>修改支付密码</legend>
+    </fieldset>
+    <form action="" class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">旧密码</label>
+            <div class="layui-input-inline">
+                <input type="password"
+                   name="oldPass" 
+                   required  
+                   lay-verify="required" 
+                   placeholder="请输入旧密码" 
+                   autocomplete="off" 
+                   class="layui-input"
+                   lay-verType="tips"/>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">新密码</label>
+            <div class="layui-input-inline">
+                <input type="password"
+                   name="newPass"
+                   required  
+                   lay-verify="required|newpassword" 
+                   placeholder="请输入新密码" 
+                   autocomplete="off" 
+                   class="layui-input" 
+                   lay-verType="tips" />
+            </div>
+            
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">再次确认</label>
+            <div class="layui-input-inline">
+                <input type="password" name="newPassAgain" 
+                       required  
+                       lay-verify="passagain" 
+                       placeholder="再次输入新密码" 
+                       autocomplete="off" 
+                       class="layui-input" 
+                       lay-verType="tips"/>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block" class="wrapper-button">
+              <button class="layui-btn" lay-submit lay-filter="updatePayPass">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="area">
+    <fieldset>
+        <legend>找回支付密码</legend>
+    </fieldset>
+    <form action="" class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">旧密码</label>
+            <div class="layui-input-inline">
+                <input type="password"
+                   name="oldPass" 
+                   required  
+                   lay-verify="required" 
+                   placeholder="请输入旧密码" 
+                   autocomplete="off" 
+                   class="layui-input" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">新密码</label>
+            <div class="layui-input-inline">
+                <input type="password"
+                   name="newPass"
+                   required  
+                   lay-verify="required|newpassword" 
+                   placeholder="请输入新密码" 
+                   autocomplete="off" 
+                   class="layui-input" />
+            </div>
+            
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">再次确认</label>
+            <div class="layui-input-inline">
+                <input type="password" name="new-pass-again" 
+                       required  
+                       lay-verify="passagain" 
+                       placeholder="再次输入新密码" 
+                       autocomplete="off" 
+                       class="layui-input" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block" class="wrapper-button">
+              <button class="layui-btn" lay-submit lay-filter="changePayPass">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>

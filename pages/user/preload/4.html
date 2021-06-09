@@ -1,0 +1,50 @@
+<h1 class="header">充值服务</h1>
+<div class="area">
+    <fieldset>
+        <legend>账户充值</legend>
+    </fieldset>
+    <form class="layui-form" action="">
+        <div class="layui-form-item" id="change-amount">
+            <label class="layui-form-label">充值金额</label>
+            <div class="layui-input-inline">
+                <select name="chargeNumber" lay-verify="chargeNumber">
+                    <option value="">请选择或输入充值金额</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">充值方式</label>
+            <div class="layui-input-inline">
+                <select name="chargeWay" lay-verify="chargeWay">
+                    <option value="">请选择充值方式</option>
+                    <option value="0">支付宝</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="recharge">立即充值</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="area">
+    <fieldset>
+        <legend>账户资金明细</legend>
+    </fieldset>
+    <table class="layui-table">
+        <thead>
+          <tr>
+            <th>交易金额</th>
+            <th>类型</th>
+            <th>余额</th>
+            <th>交易时间</th>
+          </tr> 
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>

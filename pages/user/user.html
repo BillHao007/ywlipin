@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>【礼品网】用户中心</title>
+    <link rel="stylesheet" href="../../frame/layui/css/layui.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="css/pay-confirm-layer.css">
+    <link rel="stylesheet" href="css/preorder-confirm-layer.css">
+    <!-- js-xlsx表格解析插件 -->
+    <script type="text/javascript" async src="../../plugins/xlsx.core.min.js"></script>
+
+    <!-- 解决js-xlsx解析csv中文乱码插件 -->
+    <script type="text/javascript" async src="../../plugins/cptable.full.js"></script>
+    
+    <!-- 配合js-codepage -->
+    <script type="text/javascript" async src="../../plugins/isUTF8.js"></script>
+</head>
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">礼品网</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item"><a href="../homepage/homepage.html">首页</a></li>
+                <li class="layui-nav-item"><a href="../store/store.html">礼品商城</a></li>
+                <li class="layui-nav-item"><a href="../announcement/ann-catalog.html">公告</a></li>
+                <li class="layui-nav-item"><a href="">代理加盟</a></li>
+                <li class="layui-nav-item"><a href="user.html?data-no=4">充值</a></li>
+                <li class="layui-nav-item"><a href="">关于我们</a></li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item unlogin-status">
+                    <a href="../login/login.html">登录&nbsp;/&nbsp;注册</a>
+                </li>
+                <li class="layui-nav-item login-status">
+                    <a href="user.html?data-no=0" id="username"></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="../user/user.html?data-no=0">个人中心</a></dd>
+                        <dd><a href="../manager/manager.html?data-no=0">控制台</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item login-status"><a href="javascript:;" id="logout">退出登录</a></li>
+            </ul>
+        </div>
+        <div class="layui-side layui-bg-black user-center-site-tree">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree"  lay-filter="sideNav">
+                    <li class="layui-nav-item">
+                        <a class="" href="javascript:;" data-no="0">基本信息</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;" data-no="1">订单管理</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;" data-no="3">发件信息</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;" data-no="4">充值服务</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;" data-no="5">修改信息</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;" data-no="6">退出登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-body user-center-content layui-show">
+            <!-- 内容主体区域 -->
+            <div class="site-content site-content0"></div>
+            <div class="site-content site-content1"></div>
+            <div class="site-content site-content2"></div>
+            <div class="site-content site-content3"></div>
+            <div class="site-content site-content4"></div>
+            <div class="site-content site-content5"></div>
+        </div>
+    
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            ©&nbsp;<span id="footer-year"></span>&nbsp;礼品网&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;浙ICP备20014558号-2
+        </div>
+    </div>
+    <script type="text/javascript" src="../../frame/jquery.js"></script>
+    <script type="text/javascript" src="../../plugins/jq_cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../plugins/common.js"></script>
+    <script type="text/javascript" src="../../plugins/md5.js"></script>
+    <script type="text/javascript" src="../../frame/layui/layui.js"></script>
+
+    <!-- url参数获取 -->
+    <script type="text/javascript" src="../../plugins/getUrlPara.js"></script>
+
+    <!-- 全局变量 -->
+    <script type="text/javascript" src="js/global-var.js"></script>
+
+    <!-- 解析表格 -->
+    <script type="text/javascript" src="js/readExcelSheet.js"></script>
+
+    <!-- 请求 -->
+    <script type="text/javascript" src="js/request.js"></script>
+
+    <!-- layui模块加载 -->
+    <script type="text/javascript" src="js/layui-modules.js"></script>
+
+    <!-- 预下单按钮 -->
+    <script type="text/javascript" src="js/purchase-btn.js"></script>
+
+    <!-- 预支付按钮 -->
+    <script type="text/javascript" src="js/pay-btn.js"></script>
+
+    <!-- 事件绑定函数 -->
+    <script type="text/javascript" type="text/javascript" src="js/event-deal.js"></script>
+
+    <!-- 事件绑定 -->
+    <script type="text/javascript" src="js/bind.js"></script>
+
+    <!-- main -->
+    <script type="text/javascript" src="js/user.js"></script>
+    <script></script>
+</body>
+</html>

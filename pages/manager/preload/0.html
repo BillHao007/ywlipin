@@ -1,0 +1,100 @@
+<h1 class="header">礼品管理</h1>
+<div class="area">
+    <fieldset>
+        <legend>新增礼品</legend>
+    </fieldset>
+    <form action="" class="layui-form">
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">礼品名称</label>
+            <div class="layui-input-inline">
+                <input type="text"
+                   name="giftName"
+                   required
+                   lay-verify="required"
+                   class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">上传图片</label>
+          <div class="layui-input-block uploadPicBox">
+            <img src="" alt="" width="300px" style="display:block;margin-top:20px">
+            <button type="button" class="layui-btn" id="uploadGiftPic">
+                <i class="layui-icon">&#xe67c;</i>上传礼品图片
+            </button>
+          </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">价格</label>
+            <div class="layui-input-inline">
+                <input type="text"
+                       name="price"
+                       required
+                       lay-verify="required|number"
+                       class="layui-input">
+            </div>
+            <label class="layui-form-label unit">元</label>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">重量</label>
+            <div class="layui-input-inline">
+                <input type="text"
+                       name="weight"
+                       required
+                       lay-verify="required|number"
+                       class="layui-input">
+            </div>
+            <label class="layui-form-label unit">千克/件</label>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">库存</label>
+            <div class="layui-input-inline">
+                <input type="text"
+                       name="rest"
+                       required
+                       lay-verify="required|number"
+                       class="layui-input">
+            </div>
+            <label class="layui-form-label unit">件</label>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">仓储</label>
+            <div class="layui-input-inline">
+              <select name="warehouse" lay-filter="warehouse" lay-verify="required">
+                <option value="">请选择发货仓储</option>
+                <option value="1">义务仓储</option>
+              </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="addGift">添加礼品</button>
+            </div>
+        </div>
+    </form>
+  </div>
+<div class="area">
+    <fieldset>
+        <legend>礼品列表</legend>
+    </fieldset>
+    <form action="" class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-input-inline">
+                <select name="warehouse" lay-filter="warehouse">
+                  <option value="0">全部仓储</option>
+                  <option value="1">义务仓储</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select name="status" lay-filter="status">
+                    <option value="0">状态：全部</option>
+                    <option value="1">未上架</option>
+                    <option value="2">已上架</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <button class="layui-btn" lay-submit lay-filter="filter_gift">查询</button>
+            </div>
+        </div>
+    </form>
+    <table id="giftList" lay-filter="giftList"></table>
+</div>
